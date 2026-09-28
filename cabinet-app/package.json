@@ -1,0 +1,48 @@
+{
+  "name": "cabinet-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:tz": "TZ=Pacific/Kiritimati vitest run --project unit && TZ=America/Los_Angeles vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "test:e2e": "playwright test",
+    "test:restore": "TZ=Africa/Casablanca tsx scripts/test-restore.mts",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset && tsx scripts/seed-dev.ts",
+    "backup": "tsx scripts/backup.mts",
+    "restore": "tsx scripts/restore.mts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "idb": "^8.0.3",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-easy-crop": "^6.2.3",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22.20.4",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "fake-indexeddb": "^6.2.5",
+    "pg": "^8.23.0",
+    "supabase": "^2.118.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.2"
+  }
+}
