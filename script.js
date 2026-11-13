@@ -44,6 +44,6 @@ if (appointmentForm) {
       .filter(Boolean)
       .join("\n");
 
-    window.open(`https://wa.me/212671300300?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    window.open(`https://wa.me/212625310310?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   });
 }
